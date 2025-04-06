@@ -13,7 +13,7 @@ def get_system_info():
     info['Kernel'] = platform.version()
     info['Architecture'] = platform.machine()
     info['CPU'] = platform.processor()
-    info['Memory'] = str(round(psutil.virtual_memory().total / (1024.0 ** 3), 2)) >
+    info['Memory'] = str(round(psutil.virtual_memory().total / (1024.0 ** 3), 2)) + " GB"
 
     # Disk Usage
     disk_usage = psutil.disk_usage('/')
